@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        
+        function game() {
+            let CPUWin = 0, UserWin = 0, RoundNum = 0
+            while (RoundNum < 5) {
+                Move = prompt("Please enter rock, paper, or scissors.").toLowerCase()
+                let result = MainPlay(Move)
+                if (result == "You win!") {
+                    UserWin = UserWin + 1
+                } else if (result == "You lose!") {
+                    CPUWin = CPUWin + 1
+                }
+                console.log(result)
+                RoundNum = RoundNum + 1
+            }
+            if (UserWin > CPUWin) {
+                console.log("Congratulations! You beat the CPU!")
+            } else if (UserWin < CPUWin) {
+                console.log("Better luck next time!")
+            } else {
+                console.log("You tied with the CPU.")
+            }
+            
+        }
+        function MainPlay(Move) {
+            let CPUMove = computerPlay()
+            let gameResult = playRound(Move, CPUMove)
+            return gameResult
+        }
+        
+        function computerPlay() {
+            let CPUplay = 3 * Math.random()
+           
+            if (Number(CPUplay) > 2) {
+                move = 'rock'
+            } else if (CPUplay < 1) {
+                move = 'paper'
+            } else {
+                move = 'scissors'
+            }
+
+            return move
+        }
+
+        function playRound(playerSelection, computerSelection) {
+            if (playerSelection == computerSelection) {
+                result = "It's a tie!"
+            } else {
+
+                switch(playerSelection) {
+                    case "rock":
+                        if (computerSelection == "paper") {
+                            result = "You lose!"
+                        } else if (computerSelection = "scissors") {
+                            result = "You win!"
+                        }
+                        break;
+                    case "paper":
+                        if (computerSelection == "scissors") {
+                            result = "You lose!"
+                        } else if (computerSelection == "rock") {
+                            result = "You win!"
+                        }
+                        break;
+                    case "scissors":
+                        if (computerSelection == "rock") {
+                            result = "You lose!"
+                        } else if (computerSelection == "paper") {
+                            result = "You win!"
+                        }
+                        break;
+                }
+            }
+
+              return result
+        }
+
+    </script>
+</html>
