@@ -1,0 +1,59 @@
+body {
+    background-color: rgb(20, 48, 85)
+}
+
+.buttons {
+    position: relative;
+    margin: 25px auto;
+    text-align: center;
+}
+
+.btn {
+    font-family: 'Garamond';
+    border-style: solid;
+    border-color: rgb(9, 56, 212)/*rgb(24, 24, 245)*/;
+    border-width: 3px;
+    background-color: aliceblue/*rgb(0, 0, 78)*/;
+    padding: 14px 28px;
+    margin: auto 10px;
+    font-size: 16px;
+    color: rgb(20, 48, 85);
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 5px;
+}
+  
+.btn:hover {
+      background: rgb(9, 56, 212);
+      color: white;
+}
+
+.btn:active {
+    background:rgb(20, 48, 85);
+    color: white;
+}
+
+.result {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.playerScore {
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    display: inline-block;
+}
+
+.cpuScore {
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+}
+
+h2 {
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+}
